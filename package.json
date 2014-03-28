@@ -1,0 +1,31 @@
+{
+  "name": "connect-ssi",
+  "version": "0.0.1",
+  "description": "SSI (Server Side Includes) Middleware for connect",
+  "main": "connect-ssi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soenkekluth/connect-ssi.git"
+  },
+  "keywords": [
+    "SSI",
+    "connect",
+    "gulp",
+    "grunt",
+    "Server",
+    "Side",
+    "Includes"
+  ],
+  "author": "Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soenkekluth/connect-ssi/issues"
+  },
+  "homepage": "https://github.com/soenkekluth/connect-ssi",
+  "devDependencies": {
+    "ssi": "^0.1.3"
+  }
+}
