@@ -3,6 +3,10 @@ connect-ssi
 
 SSI (Server Side Includes) Middleware for connect
 
+##install:
+<pre>
+npm install connect-ssi
+</pre>
 
 ##Examples:
 <pre>
