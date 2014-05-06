@@ -7,16 +7,17 @@ module.exports = function connectSSI(opt) {
     var fs = require("fs");
 
     var opt = opt || {};
+    var ext = opt.ext || '.shtml';
     var baseDir = opt.baseDir || __dirname;
     var parser = new ssi(__dirname, baseDir, baseDir);
 
 
     return function(req, res, next) {
 
-        var url = req.url === '/' ? '/index.shtml' : req.url;
+        var url = req.url === '/' ? ('/index' + ext) : req.url;
         var filename = baseDir + url;
 
-        if (fs.existsSync(filename) && url.indexOf('.shtml') > -1) {
+        if (fs.existsSync(filename) && url.indexOf(ext) > -1) {
 
             var contents = parser.parse(filename, fs.readFileSync(filename, {
                 encoding: 'utf8'
