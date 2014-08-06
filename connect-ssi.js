@@ -27,8 +27,10 @@ module.exports = function connectSSI(opt) {
         'Content-Type': 'text/html'
       });
       res.end(contents);
+
+    } else {
+      next();
     }
 
-    next();
   };
 };
