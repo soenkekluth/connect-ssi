@@ -2,9 +2,9 @@ module.exports = function connectSSI(opt) {
 
   'use strict';
 
-  var ssi = require("ssi");
-  var path = require("path");
-  var fs = require("fs");
+  var ssi = require('ssi');
+  var path = require('path');
+  var fs = require('fs');
 
   var opt = opt || {};
   var ext = opt.ext || '.shtml';
@@ -24,11 +24,11 @@ module.exports = function connectSSI(opt) {
       })).contents;
 
       res.writeHead(200, {
-        "Content-Type": 'text/html'
+        'Content-Type': 'text/html'
       });
       res.end(contents);
-    } else {
-      next();
     }
+
+    next();
   };
 };
