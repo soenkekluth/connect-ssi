@@ -1,6 +1,6 @@
 {
   "name": "connect-ssi",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "SSI (Server Side Includes) Middleware for connect",
   "main": "connect-ssi.js",
   "scripts": {
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/soenkekluth/connect-ssi",
   "dependencies": {
-    "ssi": "^0.1.3"
+    "ssi": "^0.1.5"
   }
 }
