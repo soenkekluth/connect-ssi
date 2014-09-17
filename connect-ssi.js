@@ -9,7 +9,8 @@ module.exports = function connectSSI(opt) {
   var opt = opt || {};
   var ext = opt.ext || '.shtml';
   var baseDir = opt.baseDir || __dirname;
-  var parser = new ssi(__dirname, baseDir, baseDir);
+  var matcher = '/**/*' + ext;
+  var parser = new ssi(baseDir, baseDir, matcher);
 
 
   return function(req, res, next) {
