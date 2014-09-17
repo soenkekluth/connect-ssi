@@ -24,10 +24,8 @@ module.exports = function connectSSI(opt) {
         encoding: 'utf8'
       })).contents;
 
-      res.writeHead(200, {
-        'Content-Type': 'text/html'
-      });
-      res.end(contents);
+      res.write(contents);
+      next();
 
     } else {
       next();
