@@ -1,24 +1,33 @@
 connect-ssi
 ===========
 
-SSI (Server Side Includes) Middleware for connect
+SSI (Server Side Includes) Middleware for [Connect] and [Express]
 
-##install:
-<pre>
-npm install connect-ssi
-</pre>
+## Install
 
-##Examples:
-<pre>
-// using gulp-connect:
-gulp.task('connect', connect.server({
-    root: ['app'],
-    middleware: function() {
-        return [connectSSI({
-            baseDir: __dirname + '/app'
-        })];
-    }
-}));
-</pre>
+    npm install connect-ssi
 
-more soon...
+## Examples
+
+### Using [gulp-connect]
+
+    gulp.task('connect', connect.server({
+        root: ['app'],
+        middleware: function() {
+            return [connectSSI({
+                baseDir: __dirname + '/app'
+            })];
+        }
+    }));
+
+
+### Using [Express]
+    var connectSSI = require('connect-ssi')
+    app.use(connectSSI({
+        baseDir: __dirname + '/public'
+    }));
+
+
+[Connect]: http://senchalabs.github.com/connect
+[Express]: http://expressjs.com/
+[gulp-connect]: https://github.com/avevlad/gulp-connect
