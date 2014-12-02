@@ -2,9 +2,9 @@
   "name": "connect-ssi",
   "version": "0.1.4",
   "description": "SSI (Server Side Includes) Middleware for connect",
-  "main": "connect-ssi.js",
+  "main": "lib/connect-ssi.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,18 @@
   },
   "homepage": "https://github.com/soenkekluth/connect-ssi",
   "dependencies": {
-    "ssi": "^0.1.5"
+    "defaults": "^1.0.0",
+    "node-ssi": "git+https://github.com/nfriedly/node-ssi.git#patch-1"
+  },
+  "devDependencies": {
+    "express": "^4.10.4",
+    "grunt-cli": "*",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-cli": "^1.9.0",
+    "jshint-stylish": "^0.2.0",
+    "load-grunt-tasks": "^0.4.0",
+    "supertest": "^0.15.0"
   }
 }
