@@ -12,24 +12,42 @@ module.exports = function connectSSI(opt) {
   var matcher = '/**/*' + ext;
   var parser = new ssi(baseDir, baseDir, matcher);
 
+  // second parameter in indexOf tells it to skip ahead to the end of the string instead of checking the entire thing
+  // http://stackoverflow.com/questions/280634/endswith-in-javascript
+  function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+  }
+
 
   return function(req, res, next) {
 
     var url = /\/$/.test(req.url) ? (req.url + 'index' + ext) : req.url;
     var filename = baseDir + url;
 
-    if (url.indexOf(ext) > -1 && fs.existsSync(filename)) {
 
-      var contents = parser.parse(filename, fs.readFileSync(filename, {
-        encoding: 'utf8'
-      })).contents;
-
-      res.write(contents);
-      next();
-
-    } else {
-      next();
+    if (!endsWith(url, ext)) {
+      return next();
     }
+
+    fs.exists(filename, function(exists) {
+
+      if (!exists) {
+        return next();
+      }
+
+      fs.readFile(filename, {
+        encoding: 'utf8'
+      }, function(err, raw) {
+        if (err) {
+          return next(err);
+        }
+
+        var contents = parser.parse(filename, raw).contents;
+        res.end(contents);
+
+      });
+
+    });
 
   };
 };
