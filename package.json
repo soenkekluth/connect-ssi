@@ -1,6 +1,6 @@
 {
   "name": "connect-ssi",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "SSI (Server Side Includes) Middleware for connect",
   "main": "connect-ssi.js",
   "scripts": {
