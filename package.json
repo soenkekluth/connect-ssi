@@ -18,7 +18,8 @@
     "grunt",
     "Server",
     "Side",
-    "Includes"
+    "Includes",
+    "shtml"
   ],
   "author": "Sönke Kluth <soenke.kluth@gmail.com> (http://soenkekluth.com/)",
   "license": "MIT",
