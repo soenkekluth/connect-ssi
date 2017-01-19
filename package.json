@@ -1,7 +1,7 @@
 {
   "name": "connect-ssi",
   "version": "1.0.0",
-  "description": "SSI (Server Side Includes) Middleware for connect",
+  "description": "SSI (Server Side Includes) Middleware for Connect and Express",
   "main": "lib/connect-ssi.js",
   "scripts": {
     "test": "grunt"
