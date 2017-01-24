@@ -82,4 +82,12 @@ describe('connect-ssi', function() {
             .end(done);
     });
 
+    it('should set a Content-Type header', function(done) {
+        request(app)
+            .get('/index.html')
+            .expect(200)
+            .expect('content-type', 'text/html; charset=UTF-8')
+            .end(done);
+    });
+
 });
