@@ -1,6 +1,8 @@
 connect-ssi
 ===========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/soenkekluth/connect-ssi.svg)](https://greenkeeper.io/)
+
 SSI (Server Side Includes) Middleware for [Connect] and [Express]
 
 ## Install
